@@ -1,0 +1,51 @@
+# ---- Secrets / credentials ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+credentials
+.aws/
+.azure/
+kubeconfig
+*.kubeconfig
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# ---- Node ----
+node_modules/
+npm-debug.log*
+.npm/
+
+# ---- Terraform (if a lab uses it) ----
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+!*.example.tfvars
+*.tfplan
+
+# ---- Claude Code personal settings ----
+.claude/settings.local.json
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/*
+!.vscode/extensions.json
+*.swp

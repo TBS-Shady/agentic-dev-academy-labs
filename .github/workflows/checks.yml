@@ -1,0 +1,48 @@
+# Runs on every pull request and push to main. Each job skips cleanly when
+# there are no files of its type yet. Bump the pinned versions below as needed.
+name: Checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  GITLEAKS_VERSION: "8.30.1"
+
+jobs:
+  secrets:
+    name: Secret scan (gitleaks)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Run gitleaks over full history
+        run: |
+          curl -sSfL "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz" | tar -xz gitleaks
+          ./gitleaks git --redact --verbose --exit-code 1 .
+
+  scripts:
+    name: Script lint (shellcheck / PSScriptAnalyzer)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: shellcheck
+        run: |
+          files=$(git ls-files '*.sh')
+          if [ -z "$files" ]; then echo "No shell scripts yet."; exit 0; fi
+          shellcheck $files
+      - name: PSScriptAnalyzer (errors only)
+        shell: pwsh
+        run: |
+          $files = git ls-files '*.ps1' '*.psm1'
+          if (-not $files) { 'No PowerShell scripts yet.'; exit 0 }
+          Install-Module PSScriptAnalyzer -Force -Scope CurrentUser
+          $issues = $files | ForEach-Object { Invoke-ScriptAnalyzer -Path $_ -Severity Error }
+          $issues | Format-Table -AutoSize
+          if ($issues) { exit 1 }

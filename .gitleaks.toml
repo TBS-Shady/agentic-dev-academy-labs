@@ -1,0 +1,9 @@
+# gitleaks configuration: the default rules, plus an allowlist for documentation placeholders.
+# Only values like YOUR_API_KEY are allowed; real-looking secrets are still reported everywhere.
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Documentation placeholders such as YOUR_PERSONAL_ACCESS_TOKEN (third-party docs in labs/companion)"
+regexTarget = "secret"
+regexes = ['''^YOUR_[A-Z0-9_]+$''']

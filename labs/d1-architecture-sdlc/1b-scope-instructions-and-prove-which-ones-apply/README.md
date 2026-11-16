@@ -12,7 +12,7 @@
 
 ## Steps
 
-### Step 1: Add the three files from the "Repository, path and cross-agen…
+### Step 1: Add the three instruction files and push them to main
 
 Add the three files from the "Repository, path and cross-agent instructions" example and push to `main`.
 

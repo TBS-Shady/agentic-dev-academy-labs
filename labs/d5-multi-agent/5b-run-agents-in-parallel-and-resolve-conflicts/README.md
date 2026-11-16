@@ -12,7 +12,7 @@
 
 ## Steps
 
-### Step 1: Create a ruleset on main requiring the test check and Require…
+### Step 1: Create a ruleset on main that requires tests and up-to-date branches
 
 Create a ruleset on `main` requiring the **test** check and **Require branches to be up to date before merging** (Settings → Rules → Rulesets).
 

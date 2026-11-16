@@ -12,7 +12,7 @@
 
 ## Steps
 
-### Step 1: Run copilot --allow-tool='shell(npm test)' --deny-tool='shell…
+### Step 1: Run Copilot CLI with one tool allowed and one denied
 
 Run `copilot --allow-tool='shell(npm test)' --deny-tool='shell(git push)'`. Ask it to run the tests (no prompt), then to commit (prompt), then to push (blocked). Record each outcome.
 

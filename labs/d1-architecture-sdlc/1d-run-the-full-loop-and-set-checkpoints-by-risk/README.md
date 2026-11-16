@@ -33,13 +33,13 @@ $ gh agent-task view 14 --log --follow
 … streams the session log: reading files, running npm test, committing …
 ```
 
-### Step 3: When the draft PR appears, approve workflows, then request a …
+### Step 3: Approve the workflows and ask Copilot to review the draft pull request
 
 When the draft PR appears, approve workflows, then request a review from **Copilot** (Reviewers → Copilot) and read its comments.
 
 **What you should see:** Copilot's review appears as review comments on specific lines, like a teammate's.
 
-### Step 4: Leave a review comment starting with @copilot asking for one …
+### Step 4: Ask Copilot for one change in a review comment
 
 Leave a review comment starting with `@copilot` asking for one change (e.g. "return 403 instead of 404 when not allowed"). Confirm it pushes to the same branch.
 
@@ -47,7 +47,7 @@ Leave a review comment starting with `@copilot` asking for one change (e.g. "ret
 
 > **If something's off:** Only users with write access can trigger it, and only on open PRs.
 
-### Step 5: Fill in this autonomy table for agent-lab and save it as docs…
+### Step 5: Fill in this autonomy table for agent-lab and save it as docs/agent-autonomy.md
 
 Fill in this autonomy table for agent-lab and save it as `docs/agent-autonomy.md`:
 

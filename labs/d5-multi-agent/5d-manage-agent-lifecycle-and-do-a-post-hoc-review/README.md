@@ -12,7 +12,7 @@
 
 ## Steps
 
-### Step 1: Add docs/agents.md from the registry example in the same PR a…
+### Step 1: Add the agent registry file, docs/agents.md
 
 Add `docs/agents.md` from the registry example in the same PR as any agent change from now on.
 

@@ -12,7 +12,7 @@
 
 ## Steps
 
-### Step 1: Commit .vscode/mcp.json with the github and microsoft-learn s…
+### Step 1: Commit .vscode/mcp.json with the github and microsoft-learn servers shown below
 
 Commit `.vscode/mcp.json` with the `github` and `microsoft-learn` servers shown below. Open the Command Palette → **MCP: List Servers** and start both.
 

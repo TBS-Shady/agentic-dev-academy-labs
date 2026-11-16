@@ -88,7 +88,7 @@ $ curl -s "localhost:3000/tasks?priority=high"
 
 > **If something's off:** PowerShell users: use `curl.exe` instead of `curl`, or test in the browser at `http://localhost:3000/tasks?priority=high`.
 
-### Step 6: Repeat the same prompt in VS Code using the built-in Plan age…
+### Step 6: Repeat the prompt with the VS Code Plan agent, then hand off
 
 Repeat the same prompt in VS Code using the built-in **Plan** agent, then hand off to implementation. Note the difference: VS Code shows a handoff button instead of an approval prompt.
 

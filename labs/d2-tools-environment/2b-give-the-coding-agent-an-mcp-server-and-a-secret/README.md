@@ -12,7 +12,7 @@
 
 ## Steps
 
-### Step 1: Settings → Code, planning, and automation → Copilot → MCP ser…
+### Step 1: Open the coding agent's MCP server settings
 
 Settings → Code, planning, and automation → Copilot → **MCP servers**. Paste only the `microsoft-learn` block shown below (inside `mcpServers`) and save.
 
@@ -50,7 +50,7 @@ Settings → Code, planning, and automation → Copilot → **MCP servers**. Pas
 
 **What you should see:** After **Save MCP configuration**, GitHub validates the JSON. Paste only the `microsoft-learn` entry inside `mcpServers` for now.
 
-### Step 2: In the cloud agent's firewall settings (custom allowlist), ad…
+### Step 2: Allow learn.microsoft.com through the agent's firewall
 
 In the cloud agent's firewall settings (custom allowlist), add `learn.microsoft.com` if your setup blocks it.
 
@@ -64,7 +64,7 @@ Create an issue: *"Add a docs/node-test.md page explaining node:test's beforeEac
 
 **What you should see:** 👀 and a draft PR adding `docs/node-test.md`.
 
-### Step 4: In View session, expand Start MCP Servers and confirm both Le…
+### Step 4: Check that both Microsoft Learn tools started in the session
 
 In **View session**, expand **Start MCP Servers** and confirm both Learn tools are listed. Find where the agent called `microsoft_docs_search`.
 

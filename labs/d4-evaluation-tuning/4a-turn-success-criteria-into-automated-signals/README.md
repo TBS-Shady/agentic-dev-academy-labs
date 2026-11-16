@@ -98,7 +98,7 @@ src/server.js
 Error: Agent PR changes a protected folder
 ```
 
-### Step 5: Map each acceptance-criteria line in your issue template to t…
+### Step 5: Map each acceptance criterion to the check that proves it
 
 Map each acceptance-criteria line in your issue template to the check that proves it. Any line without a check is a qualitative signal for the reviewer.
 

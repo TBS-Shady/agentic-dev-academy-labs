@@ -60,7 +60,7 @@ Open the Actions tab → **Copilot Setup Steps** → **Run workflow**. Confirm i
 
 **What you should see:** A green run named **Copilot Setup Steps** with one job, `copilot-setup-steps`, whose log shows `npm ci`.
 
-### Step 3: Break it on purpose in a branch (change the job name to setup…
+### Step 3: Break it on purpose in a branch (change the job name to setup) and open a PR
 
 Break it on purpose in a branch (change the job name to `setup`) and open a PR. The path trigger runs it; note that the coding agent would no longer pick it up because the job name is wrong. Close the PR.
 

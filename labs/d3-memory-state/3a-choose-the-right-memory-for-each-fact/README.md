@@ -29,7 +29,7 @@ Start `copilot` in agent-lab and run `/context`. Note the size of instructions a
   Free space           ████████████████████
 ```
 
-### Step 2: Temporarily paste the whole runbook into .github/copilot-inst…
+### Step 2: Paste the whole runbook into the instructions file and compare the context
 
 Temporarily paste the whole runbook into `.github/copilot-instructions.md`, restart, and run `/context` again. Note the increase.
 
@@ -64,13 +64,13 @@ Personal skills: ~/.copilot/skills/<name>/SKILL.md
 
 **What you should see:** Instructions shrink back. The runbook now lives in `.github/skills/release-runbook/SKILL.md`.
 
-### Step 4: Ask "What are the steps to cut a release?" and confirm the sk…
+### Step 4: Ask for the release steps and confirm the skill loads
 
 Ask *"What are the steps to cut a release?"* and confirm the skill loads (the CLI shows skill usage). Then ask an unrelated question and confirm it doesn't load.
 
 **What you should see:** For the release question, the CLI shows it used the `release-runbook` skill. For an unrelated question it doesn't.
 
-### Step 5: Sort these into short-term / long-term / external, and write …
+### Step 5: Sort the facts into short-term, long-term and external memory
 
 Sort these into short-term / long-term / external, and write the answers in `docs/memory-map.md`: "use integer cents", "the bug I'm fixing right now", "Node.js API reference", "we chose node:test over Jest", "today's failing test output".
 

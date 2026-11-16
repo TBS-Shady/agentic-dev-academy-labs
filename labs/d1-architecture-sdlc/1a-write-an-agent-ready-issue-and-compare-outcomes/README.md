@@ -12,7 +12,7 @@
 
 ## Steps
 
-### Step 1: Add an issue form so every agent task starts with the right f…
+### Step 1: Add an issue form so every agent task starts with the right fields
 
 Add an issue form so every agent task starts with the right fields.
 

@@ -12,7 +12,7 @@
 
 ## Steps
 
-### Step 1: Add the CODEOWNERS file (use your own username) and the rules…
+### Step 1: Add the CODEOWNERS file (use your own username) and the ruleset shown below
 
 Add the CODEOWNERS file (use your own username) and the ruleset shown below.
 

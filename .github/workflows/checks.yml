@@ -32,15 +32,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+      # labs/companion/ is third-party code kept unchanged, so only our own scripts are linted.
       - name: shellcheck
         run: |
-          files=$(git ls-files '*.sh')
+          files=$(git ls-files '*.sh' ':!labs/companion/**')
           if [ -z "$files" ]; then echo "No shell scripts yet."; exit 0; fi
           shellcheck $files
       - name: PSScriptAnalyzer (errors only)
         shell: pwsh
         run: |
-          $files = git ls-files '*.ps1' '*.psm1'
+          $files = git ls-files '*.ps1' '*.psm1' ':!labs/companion/**'
           if (-not $files) { 'No PowerShell scripts yet.'; exit 0 }
           Install-Module PSScriptAnalyzer -Force -Scope CurrentUser
           $issues = $files | ForEach-Object { Invoke-ScriptAnalyzer -Path $_ -Severity Error }
